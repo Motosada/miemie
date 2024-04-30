@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图书管理员后台发布公告</title>
+    <style>
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="openPopup">发布公告</button>
+    <div class="popup" id="popup">
+      <h1>图书管理员后台发布公告</h1>
+      <form>
+        <label for="title">标题:</label><br />
+        <input type="text" id="title" name="title" /><br /><br />
+        <label for="content">内容:</label><br />
+        <textarea id="content" name="content" rows="4" cols="50"></textarea
+        ><br /><br />
+        <input type="submit" value="发布公告" />
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("openPopup")
+        .addEventListener("click", function () {
+          document.getElementById("popup").style.display = "block";
+        });
+    </script>
+  </body>
+</html>

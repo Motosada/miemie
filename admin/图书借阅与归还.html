@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>图书借阅和归还</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+      }
+      .sidebar {
+        width: 200px;
+        background-color: #212121;
+        color: #fff;
+        padding: 20px;
+      }
+      .sidebar h2 {
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .sidebar li {
+        margin-bottom: 20px; /* Increase the margin between list items */
+      }
+      .sidebar a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+      }
+      .sidebar a:hover {
+        text-decoration: none;
+        background-color: #4caf50;
+        border-radius: 5px; /* Add border radius for rounded corners */
+      }
+      .main-content {
+        flex: 1;
+        padding: 20px;
+        background-color: #fff;
+      }
+      h1 {
+        color: #000;
+      }
+      h2 {
+        color: #666;
+      }
+      form {
+        margin-top: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="date"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        width: 100%;
+        padding: 5px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <h2>功能列表</h2>
+        <ul>
+          <li><a href="图书管理员主页.html">书籍信息</a></li>
+          <li><a href="管理员借阅证.html">借阅证查询</a></li>
+          <li><a href="借阅信息查询.html">借阅信息查询</a></li>
+          <li><a href="图书借阅报表.html">借阅图书</a></li>
+          <li><a href="图书归还报表.html">归还图书</a></li>
+          <li><a href="发布公告.html">发布公告</a></li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <h1>图书借阅</h1>
+        <p>在这里您可以借阅图书，请填写以下信息：</p>
+
+        <form action="#">
+          <label for="borrower-card-number">借阅证号：</label>
+          <input
+            type="text"
+            id="borrower-card-number"
+            name="borrower-card-number"
+          />
+
+          <label for="book-name">书名：</label>
+          <input type="text" id="book-name" name="book-name" />
+
+          <label for="borrow-date">借阅日期：</label>
+          <input type="date" id="borrow-date" name="borrow-date" />
+
+          <input type="submit" value="借阅" />
+        </form>
+
+        <h1>图书归还</h1>
+        <p>在这里您可以归还图书，请填写以下信息：</p>
+
+        <form action="#">
+          <label for="return-book-name">归还书名：</label>
+          <input type="text" id="return-book-name" name="return-book-name" />
+
+          <input type="submit" value="归还" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>图书管理员借阅证管理</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+      }
+      .sidebar {
+        width: 200px;
+        background-color: #212121;
+        color: #fff;
+        padding: 20px;
+      }
+      .sidebar h2 {
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .sidebar li {
+        margin-bottom: 20px; /* Increase the margin between list items */
+      }
+      .sidebar a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+      }
+      .sidebar a:hover {
+        text-decoration: none;
+        background-color: #4caf50;
+        border-radius: 5px; /* Add border radius for rounded corners */
+      }
+      .main-content {
+        flex: 1;
+        padding: 20px;
+        background-color: #fff;
+      }
+      h1 {
+        color: #000;
+      }
+      h2 {
+        color: #666;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <h2>功能列表</h2>
+        <ul>
+          <li><a href="图书管理员主页.html">书籍信息</a></li>
+          <li><a href="管理员借阅证.html">借阅证查询</a></li>
+          <li><a href="借阅信息查询.html">借阅信息查询</a></li>
+          <li><a href="图书借阅报表.html">借阅图书</a></li>
+          <li><a href="图书归还报表.html">归还图书</a></li>
+          <li><a href="发布公告.html">发布公告</a></li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <h1>借阅证管理</h1>
+        <p>
+          在这里您可以管理借阅证，包括添加新借阅证、编辑借阅证信息、删除不需要的借阅证等操作。
+        </p>
+
+        <h3>借阅证列表</h3>
+        <table>
+          <tr>
+            <th>借阅证号</th>
+            <th>读者姓名</th>
+            <th>借阅证状态</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td>123456</td>
+            <td>张三</td>
+            <td>正常</td>
+            <td><a href="#">编辑</a> | <a href="#">删除</a></td>
+          </tr>
+          <tr>
+            <td>654321</td>
+            <td>李四</td>
+            <td>挂失</td>
+            <td><a href="#">解除挂失</a></td>
+          </tr>
+          <tr>
+            <td>987654</td>
+            <td>王五</td>
+            <td>注销</td>
+            <td><a href="#">重新激活</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

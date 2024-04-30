@@ -1,0 +1,120 @@
+* {
+  border: px solid black;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+}
+.displayflex {
+  display: flex;
+}
+.ac {
+  color: gray;
+  text-decoration: none; /* 去除下划线 */
+}
+.black {
+  background-color: black;
+}
+.gray {
+  color: gray;
+}
+.justify {
+  /* 弹性盒子居中 */
+  display: flex;
+  align-items: center; /*上下居中*/
+  justify-content: center; /*左右居中*/
+}
+.center {
+  /* 浮动居中 */
+  text-align: center;
+}
+.title {
+  /* 大标题字体与高 */
+  font-size: 25px;
+  height: 50px;
+  margin: 5px;
+}
+div.black > div.title > a.ac:hover {
+  /* 大标题的鼠标悬停样式变化 */
+  color: white; /* 鼠标悬停时的文本颜色 */
+}
+.right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+div.black > div.right > a.ac:hover {
+  color: white;
+}
+.div.displayflex > div.right {
+  justify-content: flex-end;
+}
+.toolbar {
+  /* 左工具栏 */
+  width: 20%;
+  height: 100%;
+  color: rgb(115, 210, 239);
+}
+.blue {
+  color: rgb(74, 203, 235);
+}
+div.toolbar > div {
+  /* 选中左工具栏中的div并修改上下边距 */
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+div.toolbar > div > a:hover {
+  /* 左工具栏中的鼠标悬停样式变化 */
+  background-color: rgb(115, 210, 239); /* 鼠标悬停时的背景颜色 */
+  color: white; /* 鼠标悬停时的文本颜色 */
+  text-decoration: none;
+}
+div.toolbar > div > a {
+  text-decoration: none;
+  color: rgb(74, 203, 235);
+}
+div.toolbar > div:hover {
+  background-color: rgb(115, 210, 239); /* 鼠标悬停时的背景颜色 */
+  color: white; /* 鼠标悬停时的文本颜色 */
+}
+
+/* 主体内容部分 */
+.widthMax {
+  width: 100%;
+}
+.heightMax {
+  height: 100%;
+}
+.wint {
+  background-color: #fbf7f7;
+}
+.cin {
+  /* 登录页面的大小样式 */
+  height: 350px;
+  width: 550px;
+  border-radius: 35px;
+}
+
+.my_input {
+  margin-top: 25px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  border-bottom: 2px solid white;
+  border-radius: 15px;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.my_input:hover {
+  border-bottom: 2px solid #ff9c6e;
+}
+.input[type="submit"] {
+  margin-top: 45px;
+  background-color: #fce4ec;
+  font-size: 18px;
+  transition: all 0.5s;
+  border-radius: 15px;
+}
+.myInput[type="submit"]:hover {
+  background-color: #ffd6e7;
+}

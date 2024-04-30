@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="js/userLongin.js"></script>
+  </head>
+  <body>
+    <!-- 上半部分 -->
+    <div class="black displayflex">
+      &emsp;&emsp;
+      <div class="title gray justify">
+        <a href="#" class="ac">欢迎登录图书管理系统</a>
+      </div>
+      &emsp;&emsp;
+      <div class="justify gray">借阅者页面</div>
+      <div style="width: 60%"></div>
+      <div class="right justify">
+        <a href="../admin/管理员登入.html" class="ac"> 管理员登录 </a>
+        &emsp;&emsp;
+        <a href="用户注册.html" class="ac"> 用户注册 </a>
+      </div>
+    </div>
+
+    <!-- 主体 -->
+    <div
+      class="displayflex heightMax"
+      style="height: 663px; margin: 0px; padding: 0px"
+    >
+      <!-- 左工具栏 -->
+      <div class="toolbar center">
+        <div><a href="主页.html">首页</a></div>
+        <div><a href="图书查询.html">图书查询</a></div>
+        <div><a href="查看公告.html">查看公告</a></div>
+      </div>
+      <!-- 右半部主体内容 -->
+      <div class="widthMax heightMax justify wint">
+        <div
+          class="justify cin"
+          style="
+            background: url(img/a.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+          "
+        >
+          <div class="center widthMax">
+            <h1 class="blue">借阅者登录</h1>
+
+            <form method="post">
+              <div>
+                <input
+                  id="username"
+                  type="text"
+                  class="my_input input myInput"
+                  placeholder="请输入账号"
+                />
+              </div>
+              <div>
+                <input
+                  id="passwd"
+                  type="password"
+                  class="my_input input myInput"
+                  placeholder="请输入密码"
+                />
+              </div>
+              <div class="center">
+                <input
+                  class="my_input input myInput"
+                  style="width: 500px"
+                  type="button"
+                  value="登录"
+                  onclick="login()"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

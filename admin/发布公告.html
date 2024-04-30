@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>公告管理</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+      }
+      .sidebar {
+        width: 200px;
+        background-color: #212121;
+        color: #fff;
+        padding: 20px;
+      }
+      .sidebar h2 {
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .sidebar li {
+        margin-bottom: 20px; /* Increase the margin between list items */
+      }
+      .sidebar a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+      }
+      .sidebar a:hover {
+        text-decoration: none;
+        background-color: #4caf50;
+        border-radius: 5px; /* Add border radius for rounded corners */
+      }
+      .main-content {
+        flex: 1;
+        padding: 20px;
+        background-color: #fff;
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+      p {
+        color: #666;
+        margin-bottom: 20px;
+      }
+      .公告列表 {
+        margin-top: 20px;
+      }
+      .公告列表 table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .公告列表 th,
+      .公告列表 td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+      .公告列表 th {
+        background-color: #f2f2f2;
+      }
+      .公告列表 tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      .发布公告按钮 {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .发布公告弹窗 {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+      }
+      .发布公告弹窗 form {
+        margin-top: 20px;
+      }
+      .发布公告弹窗 label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .发布公告弹窗 input[type="text"],
+      .发布公告弹窗 textarea {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+      }
+      .发布公告弹窗 input[type="submit"] {
+        width: 100%;
+        padding: 5px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      .发布公告弹窗 .close-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        padding: 5px;
+        background-color: #ccc;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <h2>功能列表</h2>
+        <ul>
+          <li><a href="图书管理员主页.html">书籍信息</a></li>
+          <li><a href="管理员借阅证.html">借阅证查询</a></li>
+          <li><a href="借阅信息查询.html">借阅信息查询</a></li>
+          <li><a href="图书借阅报表.html">借阅图书</a></li>
+          <li><a href="图书归还报表.html">归还图书</a></li>
+          <li><a href="发布公告.html">发布公告</a></li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <h1>公告管理</h1>
+        <p>在这里您可以查看和发布公告。</p>
+
+        <div class="公告列表">
+          <h3>公告列表</h3>
+          <table>
+            <tr>
+              <th>公告标题</th>
+              <th>公告内容</th>
+              <th>发布时间</th>
+            </tr>
+            <tr>
+              <td>图书借阅新规定</td>
+              <td>从 2023 年 3 月 20 日起，图书借阅数量上限调整为 5 本。</td>
+              <td>2023-03-18</td>
+            </tr>
+            <tr>
+              <td>图书馆闭馆通知</td>
+              <td>
+                因系统升级，图书馆将于 2023 年 3 月 25 日至 26 日闭馆两天。
+              </td>
+              <td>2023-03-23</td>
+            </tr>
+          </table>
+        </div>
+
+        <button class="发布公告按钮" onclick="open发布公告弹窗()">
+          发布公告
+        </button>
+
+        <div class="发布公告弹窗" id="发布公告弹窗">
+          <span class="close-button" onclick="close发布公告弹窗()"
+            >&times;</span
+          >
+          <h3>发布公告</h3>
+          <form action="#">
+            <label for="title">公告标题：</label>
+            <input type="text" id="title" name="title" />
+
+            <label for="content">公告内容：</label>
+            <textarea id="content" name="content"></textarea>
+
+            <input type="submit" value="发布" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function open发布公告弹窗() {
+        document.getElementById("发布公告弹窗").style.display = "block";
+      }
+
+      function close发布公告弹窗() {
+        document.getElementById("发布公告弹窗").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

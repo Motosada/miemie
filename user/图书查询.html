@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图书查询</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <linl rel="stylesheet" type="text/css" href="css/query.css" />
+    <style>
+      td {
+        max-width: 260px; /* 设置最大宽度 */
+        overflow: hidden; /* 隐藏超出部分 */
+        text-overflow: ellipsis; /* 超出部分显示省略号 */
+        white-space: nowrap; /* 不换行 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 上半部分 -->
+    <div class="black displayflex">
+      &emsp;&emsp;
+      <div class="title gray justify">
+        <a href="#" class="ac">欢迎登录图书管理系统</a>
+      </div>
+      &emsp;&emsp;
+      <div class="justify gray">借阅者页面</div>
+      <div style="width: 66%"></div>
+      <div class="right justify">
+        <a href="用户登入.html" class="ac"> 用户登录 </a>
+      </div>
+    </div>
+
+    <!-- 主体 -->
+    <div
+      class="displayflex heightMax"
+      style="height: 663px; margin: 0px; padding: 0px"
+    >
+      <!-- 左工具栏 -->
+      <div class="toolbar center">
+        <div><a href="主页.html">首页</a></div>
+        <div><a href="图书查询.html">图书查询</a></div>
+        <div><a href="查看公告.html">查看公告</a></div>
+      </div>
+      <!-- 右半部主体内容 -->
+      <div class="widthMax heightMax wint">
+        <div class="ls">
+          <div class="displayflex" style="margin: 10px">
+            条件搜索：
+            <div class="layui-inline">
+              <select id="condition" name="condition" lay-verify="required">
+                <option value="">请选择</option>
+                <option value="id">图书编号</option>
+                <option value="name">图书名称</option>
+                <option value="author">作者</option>
+                <option value="position">位置</option>
+                <option value="description">描述</option>
+              </select>
+              <div class="layui-unselect layui-form-select"></div>
+            </div>
+            &emsp;
+            <div class="layui-inline">
+              <input
+                class="layui-input htwo"
+                id="conditionValue"
+                name="conditionValue"
+                autocomplete="off"
+                placeholder="请输入"
+              />
+            </div>
+            &emsp;
+            <button
+              class="layui-btn layui-bg-blue htwo"
+              name="condition"
+              data-type="reload"
+              lay-event="search"
+            >
+              搜索
+            </button>
+          </div>
+        </div>
+
+        <table
+          align="center"
+          border="1"
+          cellpadding="10"
+          cellspacing="1s"
+          width="98%"
+          style="border: 0; margin: 0"
+        >
+          <tr>
+            <td>图书编号</td>
+            <td>图书名称</td>
+            <td>作者</td>
+            <td>图书馆</td>
+            <td>分类</td>
+            <td>位置</td>
+            <td>状态</td>
+            <td>描述</td>
+          </tr>
+          <tr>
+            <td>231</td>
+            <td>今夜通宵杀敌</td>
+            <td>郑在欢</td>
+            <td>南图</td>
+            <td>人物事迹</td>
+            <td>ed50ea</td>
+            <td>已借出</td>
+            <td>
+              《驻马店伤心故事集》之后，驻马店青年郑在欢强势回归！
+              驻马店的故事仍
+            </td>
+          </tr>
+          <tr>
+            <td>234</td>
+            <td>自转时公转的都小姐</td>
+            <td>[日]山本文绪</td>
+            <td>南图</td>
+            <td>社会与科学</td>
+            <td>0056cc</td>
+            <td>已借出</td>
+            <td>
+              ★ 直木奖得主山本文绪暌违7年全新代表作。 ★
+              新海诚感动推荐，林真理子力赞！ ★
+              自转时公转，是每一个平凡女性的生存现状。一边要做家务，一边要照顾家人，一边还要开足马力地去工作……身为女性，就必须结婚生子、打拼事业、照顾父母吗？本书写出了所有平凡女性的心声，和那些不曾被理解的琐碎和孤独。“兼顾工作与家庭”，或许是对女性励志又残忍的谎言。
+              ★
+              日本女性主义文学全新里程碑，横扫日本各大文学奖项。获2021年日本书店大奖第5名，摘夺第27届日本岛清恋爱文学奖、第16届中央公论文学奖桂冠。
+              ★ 无论20岁、30岁还是40岁，我只想过自己的人生。 - - - - - -
+              32岁的都小姐，觉得自己快要崩溃了。
+              明明是为了照顾患有更年期疾病的母亲才回到家乡，但与父母同住的日子怎么会日渐压抑？职场生活也让人无比想逃避，性别歧视、工作压力已经够烦恼了，偏偏在这时，还...
+            </td>
+          </tr>
+          <tr>
+            <td>236</td>
+            <td>另起的新文化运动</td>
+            <td>袁一丹</td>
+            <td>南图</td>
+            <td>编程类书籍</td>
+            <td>b4d32b</td>
+            <td>已借出</td>
+            <td>
+              现代文学史一贯把《新青年》标记为新文化运动的起点。然而鲁迅在《热风·题
+            </td>
+          </tr>
+          <tr>
+            <td>237</td>
+            <td>伏特加政治：酒精、专制和俄罗斯国家秘史</td>
+            <td>[美]马克·劳伦斯·希拉德（Mark</td>
+            <td>南图</td>
+            <td>4c4475</td>
+            <td></td>
+            <td>已借出</td>
+            <td>
+              【内容简介】 在《伏特加政治》一书中，马克·劳伦斯·施拉德（Mark
+              Lawrenc
+            </td>
+          </tr>
+          <tr>
+            <td>340</td>
+            <td>软件测试方法和技术</td>
+            <td>朱少民</td>
+            <td>南图</td>
+            <td>教育书籍</td>
+            <td>283</td>
+            <td>未借出</td>
+            <td>该书籍讲述了软件测试的基本知识。</td>
+          </tr>
+          <tr>
+            <td>356</td>
+            <td>软件测试方法和技术</td>
+            <td>朱少民</td>
+            <td>南图</td>
+            <td>教育书籍</td>
+            <td>283</td>
+            <td>未借出</td>
+            <td>该书籍讲述了软件测试的基本知识。</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

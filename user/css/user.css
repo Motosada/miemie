@@ -1,0 +1,25 @@
+.scrolling-wrapper {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-wrapper > div {
+  display: inline-block;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: flex-start; /* 水平方向上对齐到左边 */
+  align-items: flex-start; /* 垂直方向上对齐到顶部 */
+}

@@ -1,0 +1,84 @@
+.scrolling-wrapper {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-wrapper > div {
+  display: inline-block;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: flex-start; /* 水平方向上对齐到左边 */
+  align-items: flex-start; /* 垂直方向上对齐到顶部 */
+}
+
+#changePasswordBox {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+  padding: 20px;
+  background-color: #fff;
+  z-index: 10;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.end {
+  width: 100%;
+  height: 30%;
+  background-color: rgb(220, 240, 245);
+}
+.home {
+  width: 95%;
+  height: 100%;
+  background-color: rgb(220, 240, 245);
+  float: left;
+  color: rgb(108, 108, 108);
+  position: relative;
+
+  left: 2.5%;
+}
+.homeone {
+  width: 100%;
+  height: 30%;
+  background-color: rgb(158, 183, 241);
+  float: center;
+}
+.centere {
+  width: 100%;
+  height: 40%;
+  background-color: rgb(158, 183, 241);
+  text-align: center;
+}
+.paa {
+  width: 300px;
+  height: 190px;
+  border-right: 2px solid rgb(110, 109, 109);
+  color: aliceblue;
+}
+.button {
+  width: 300px;
+}

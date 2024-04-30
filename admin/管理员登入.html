@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>图书管理员登入</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+        background-image: url("img/a.jpg");
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 5px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      .error {
+        color: red;
+      }
+
+      /* 美化样式 */
+      form {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        border-radius: 3px;
+      }
+
+      input[type="submit"] {
+        background-color: #007bff;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center widthMax">
+      <h1>图书管理员登入</h1>
+
+      <form method="post">
+        <div>
+          <label for="username">账号：</label>
+          <input
+            id="username"
+            type="text"
+            class="my_input input myInput"
+            placeholder="请输入账号"
+          />
+        </div>
+        <div>
+          <label for="passwd">密码：</label>
+          <input
+            id="passwd"
+            type="password"
+            class="my_input input myInput"
+            placeholder="请输入密码"
+          />
+        </div>
+        <div class="center">
+          <input
+            class="my_input input myInput"
+            type="button"
+            value="登录"
+            onclick="login()"
+          />
+        </div>
+        <a href="../user/主页.html">返回主页</a>
+      </form>
+    </div>
+
+    <script>
+      let accountAll = [
+        {
+          // 存储账户json数据的数组
+          username: 123,
+          passwd: "qwe",
+        },
+        {
+          username: 456,
+          passwd: "asd",
+        },
+        {
+          username: 789,
+          passwd: "zxc",
+        },
+      ];
+      function login() {
+        //登陆判断
+        let username = document.getElementById("username").value;
+        let passwd = document.getElementById("passwd").value;
+        let account = accountAll.filter(function (e) {
+          return e.username == username;
+        })[0]; // 筛选账号返回数组，不存在则返回空数组
+        if (!account) {
+          alert("账户不存在");
+        } else {
+          if (account.username == username && account.passwd == passwd) {
+            window.location.href = "图书管理员主页.html";
+          } else {
+            alert("密码错误");
+          }
+        }
+      }
+      function doClear() {
+        //获取页面所有的input框，是text和password框，内容=空串
+        let inputs = document.getElementsByTagName("input");
+        for (let i = 0; i < inputs.length; i++) {
+          if (inputs[i].type == "text" || inputs[i].type == "password") {
+            inputs[i].value = "";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

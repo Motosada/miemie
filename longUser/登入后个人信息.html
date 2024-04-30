@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>借读者页面</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/user.css" />
+    <script src="js/user.js"></script>
+  </head>
+  <body>
+    <!-- 上半部分 -->
+    <div class="black displayflex">
+      &emsp;&emsp;
+      <div class="title gray justify">
+        <a href="#" class="ac">欢迎登录图书管理系统</a>
+      </div>
+      &emsp;&emsp;
+      <div class="justify gray">借阅者页面</div>
+      <div style="width: 63%"></div>
+      <div class="right justify">
+        <a href="#" class="ac"> 您好*** </a>
+      </div>
+      &emsp;&emsp;
+      <div class="right justify">
+        <a href="../user/主页.html" class="ac"> 退出 </a>
+      </div>
+    </div>
+    <!-- 主体 -->
+    <div
+      class="displayflex heightMax"
+      style="height: 663px; margin: 0px; padding: 0px"
+    >
+      <!-- 左工具栏 -->
+      <div class="toolbar center">
+        <div><a href="用户登入后主页.html">首页</a></div>
+        <div><a href="用户登录后图书查询.html">图书查询</a></div>
+        <div><a href="用户登入后图书借阅.html">图书借阅</a></div>
+        <div><a href="用户登入后查看公告.html">查看公告</a></div>
+        <div><a href="登入后个人信息.html">个人信息</a></div>
+      </div>
+      <!-- 右半部主体内容 -->
+      <div class="widthMax heightMax wint">
+        <div class="homeone">
+          <div class="home">
+            <h1 style="text-align: center">个人信息</h1>
+            <p style="text-align: center">
+              Success is waking up in the morning,so excited about what you have
+              to do.
+            </p>
+          </div>
+        </div>
+        <div class="centere justify">
+          <div class="displayflex">
+            <div class="paa">
+              <p>借阅证编号：1805010219</p>
+              <p>借阅证姓名：明月复苏</p>
+              <p>规则编号：18</p>
+              <p>状态： 可用</p>
+            </div>
+
+            <div class="justify button">
+              <button id="changePasswordButton">修改密码</button>
+            </div>
+
+            <div id="changePasswordBox">
+              <!-- 密码修改表单 -->
+              <form
+                style="
+                  background: url(img/a.jpg);
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-size: cover;
+                "
+              >
+                <label for="newPassword">新密码:</label>
+                <input
+                  type="password"
+                  id="newPassword"
+                  name="newPassword"
+                /><br /><br />
+                <label for="confirmPassword">确认密码:</label>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                /><br /><br />
+                <button type="submit">提交</button>
+                <button type="button" onclick="closeBox()">取消</button>
+              </form>
+            </div>
+
+            <div class="overlay"></div>
+          </div>
+        </div>
+        <div class="end">
+          <div></div>
+        </div>
+
+        <script>
+          function openBox() {
+            document.getElementById("changePasswordBox").style.display =
+              "block";
+            document.getElementById("overlay").style.display = "block";
+          }
+
+          function closeBox() {
+            document.getElementById("changePasswordBox").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+          }
+
+          document
+            .getElementById("changePasswordButton")
+            .addEventListener("click", openBox);
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
